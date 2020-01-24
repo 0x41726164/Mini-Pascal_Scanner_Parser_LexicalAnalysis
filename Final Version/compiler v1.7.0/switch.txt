@@ -1,0 +1,37 @@
+// elseiftestmore.cpp : Defines the entry point for the console application.
+//
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+int _tmain(int argc, _TCHAR* argv[])
+{
+	char c;
+	cin >> c;
+	int a = 1;
+	while (a != 2) {
+		switch (c) {
+		case 'a' :
+			cout << "a";
+			break;
+		case 'b' :
+			cout << "b";
+			break;
+		case 'c' :
+			cout << "c";
+			break;
+		}
+	}
+	/*
+	if (c == 'a'){
+		cout << "c is a";
+	}
+	else if (c == 'b'){
+		cout << "c is b";
+	}
+	else if (c == 'c'){
+		cout << "c is c";
+	}*/
+	cin.get();
+	cin.get();
+	return 0;
+}

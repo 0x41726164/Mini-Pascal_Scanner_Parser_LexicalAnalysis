@@ -1,0 +1,451 @@
+// compilerVersion_1.4.1.cpp : Defines the entry point for the console application.
+//
+
+// compile3_MajorEdit.cpp : Defines the entry point for the console application.
+//
+
+// Compile2.cpp : Defines the entry point for the console application.
+//
+
+// LexicalAnalayser for MINI-PASCAL language.cpp : Defines the entry point for the console application.
+//
+
+// calling libraries and classes
+#include "stdafx.h"
+#include <string>
+#include <iostream>
+#include "conio.h"
+#include "stdio.h"
+#include <Windows.h>
+#include <iomanip>
+
+
+// using std name space to easily use input/output commands
+using namespace std;
+
+
+// the main functional class
+int _tmain(int argc, _TCHAR* argv[])
+{
+
+	// VARIABLES:
+	// a character to read the input
+	char c;
+	char exit;
+	int  state = 0;
+
+
+	// Output Start:
+	cout << "enter below:\n>>>";
+
+	while (cin.get() != '\n') {
+		/*		cout << "do you wish to exit this program? (Y/N) ";
+		cin >> exit;
+		if (exit == 'y')
+		break;
+		else if (exit == 'n')
+		*/		// switch statement to survay in automata
+		switch (state) {
+
+			//BASE  Q1:
+		case (0) :
+			cout << "00>>>";
+			c = getchar();
+			if (c == 'b') {
+				state = 3;
+			}
+			else if (c == 'e') {
+				state = 5;
+			}
+			else if (c == 'i') {
+				state == 6;
+			}
+			else if (c == 'd') {
+				state = 4;
+			}
+			else if (c == 'w') {
+				state = 8;
+			}
+			else if (c == 'r') {
+				state = 7;
+			}
+			// finding symbols
+/*			else if (c = '+' || '-' || '*' || '=' || '<' || '>' || '(' || ')' || '[' || ']' || ';' || '.' || ',') {
+				cout << "\nfound a TOKEN: SYMBOL";
+				state = 11;
+			}
+			// finding digits
+			else if (c = '0' || '1' || '2' || '3' || '4' || '5' || '6' || '7' || '8' || '9') {
+				state = 10;
+			}
+			// finding letters
+			else if (c = 'a' || 'c' || 'f' || 'g' || 'h' || 'j' || 'k' || 'l' || 'm' || 'n' || 'o' || 'p' || 'q' || 'r' || 's' || 't' || 'u' || 'v') {
+				state = 2;
+			}
+			// ERROR
+			else cout << "\nwUndifined input";*/
+			break;
+
+
+
+// Start of possible statement: 'BEGIN'
+		// Q3:
+		case (3) :
+			cout << "03>>>";
+			c = getchar();
+			if (c = 'e')
+				state = 31;
+			else if (c = 'a' || 'b' || 'c' || 'd' || 'f' || 'g' || 'h' || 'i' || 'j' || 'k' || 'l' || 'm' || 'n' || 'o' || 'p' || 'q' || 'r' || 's' || 't' || 'u' || 'v' || 'w' || 'x' || 'y' || 'z') {
+				state = 2;
+			}
+			// ERROR
+			else cout << "\nUndifined input";
+			break;
+
+		// Q3e:
+		case (31) :
+			cout << "31>>>";
+			c = getchar();
+			if (c = 'g')
+				state = 32;
+			else if (c = 'a' || 'b' || 'c' || 'd' || 'e' || 'f' || 'h' || 'i' || 'j' || 'k' || 'l' || 'm' || 'n' || 'o' || 'p' || 'q' || 'r' || 's' || 't' || 'u' || 'v' || 'w' || 'x' || 'y' || 'z') {
+				state = 2;
+			}
+			// ERROR
+			else cout << "\nUndifined input";
+			break;
+
+		// Q3eg:
+		case (32) :
+			cout << "32>>>";
+			c = getchar();
+			if (c = 'i')
+				state = 33;
+			else if (c = 'a' || 'b' || 'c' || 'd' || 'e' || 'f' || 'g' || 'h' || 'j' || 'k' || 'l' || 'm' || 'n' || 'o' || 'p' || 'q' || 'r' || 's' || 't' || 'u' || 'v' || 'w' || 'x' || 'y' || 'z') {
+				state = 2;
+			}
+			// ERROR
+			else cout << "\nUndifined input";
+			break;
+
+			// Q3egi:
+		case (33) :
+			cout << "33>>>";
+			c = getchar();
+			if (c = 'n')
+				state = 34;
+			else if (c = 'a' || 'b' || 'c' || 'd' || 'e' || 'f' || 'g' || 'h' || 'i' || 'j' || 'k' || 'l' || 'm' || 'o' || 'p' || 'q' || 'r' || 's' || 't' || 'u' || 'v' || 'w' || 'x' || 'y' || 'z') {
+				state = 2;
+			}
+			// ERROR
+			else cout << "\nUndifined input";
+			break;
+
+			// Q3egin (End of 'BEGIN' statement) :
+		case (34) :
+			cout << "\n34found a TOKEN: BEGIN";
+			break;
+
+
+
+			// Start of possible statements: 'ELSE' or 'END'
+			// Q5:
+		case (5) :
+			cout << "05>>>";
+			c = getchar();
+			if (c = 'l')
+				state = 52;
+			else if (c = 'n')
+				state = 56;
+			else if (c = 'a' || 'b' || 'c' || 'd' || 'e' || 'f' || 'g' || 'h' || 'i' || 'j' || 'k' || 'm' || 'o' || 'p' || 'q' || 'r' || 's' || 't' || 'u' || 'v' || 'w' || 'x' || 'y' || 'z') {
+				state = 2;
+			}
+			// ERROR
+			else cout << "\nUndifined input";
+			break;
+
+			// Q5L:
+		case (52) :
+			cout << "52>>>";
+			c = getchar();
+			if (c = 's')
+				state = 53;
+			else if (c = 'a' || 'b' || 'c' || 'd' || 'e' || 'f' || 'g' || 'h' || 'i' || 'j' || 'k' || 'l' || 'm' || 'n' || 'o' || 'p' || 'q' || 'r' || 't' || 'u' || 'v' || 'w' || 'x' || 'y' || 'z') {
+				state = 2;
+			}
+			// ERROR
+			else cout << "\nUndifined input";
+			break;
+
+			// Q5LS:
+		case (53) :
+			cout << ">>>";
+			c = getchar();
+			if (c = 'e')
+				state = 54;
+			else if (c = 'a' || 'b' || 'c' || 'd' || 'f' || 'g' || 'h' || 'i' || 'j' || 'k' || 'l' || 'm' || 'n' || 'o' || 'p' || 'q' || 'r' || 's' || 't' || 'u' || 'v' || 'w' || 'x' || 'y' || 'z') {
+				state = 2;
+			}
+			// ERROR
+			else cout << "\nWUndifined input";
+			break;
+
+			// Q5LSE (End of 'ELSE' statement) :
+		case (54) :
+			cout << "\nfound TOKEN: ELSE";
+			break;
+
+			// Q5n:
+		case (56) :
+			cout << "\n>>>";
+			c = getchar();
+			if (c = 'd')
+				state = 57;
+			else if (c = 'a' || 'b' || 'c' || 'e' || 'f' || 'g' || 'h' || 'i' || 'j' || 'k' || 'l' || 'm' || 'n' || 'o' || 'p' || 'q' || 'r' || 's' || 't' || 'u' || 'v' || 'w' || 'x' || 'y' || 'z') {
+				state = 2;
+			}
+			// ERROR
+			else cout << "\nUndifined input";
+			//		goto Terminal;
+
+			// Q5nd (End of 'END' statement) :
+		case (57) :
+			cout << "\nfound TOKEN: END";
+			break;
+
+
+
+			// Start of possible statement: 'IF'
+			// Q6:
+		case (6) :
+			cout << "\n>>>";
+			c = getchar();
+			if (c = 'f')
+				state = 61;
+			else if (c = 'a' || 'b' || 'c' || 'd' || 'e' || 'g' || 'h' || 'i' || 'j' || 'k' || 'l' || 'm' || 'n' || 'o' || 'p' || 'q' || 'r' || 's' || 't' || 'u' || 'v' || 'w' || 'x' || 'y' || 'z') {
+				state = 2;
+			}
+			// ERROR
+			else cout << "\nUndifined input";
+			break;
+
+			// Q6f (END of 'IF' statement) :
+			// Q6f:
+		case (61) :
+			cout << "\nfound TOKEN: IF";
+			break;
+
+
+
+			// Start of possible statements: 'DO'
+			// Q4:
+		case (4) :
+			cout << "\n>>>";
+			c = getchar();
+			if (c = 'o')
+				state = 41;
+			else if (c = 'a' || 'b' || 'c' || 'd' || 'e' || 'f' || 'g' || 'h' || 'i' || 'j' || 'k' || 'l' || 'm' || 'n' || 'p' || 'q' || 'r' || 's' || 't' || 'u' || 'v' || 'w' || 'x' || 'y' || 'z') {
+				state = 2;
+			}
+			// ERROR
+			else cout << "\nUndifined input";
+			break;
+
+			// Q4o (END of 'DO' statement) :
+		case (41) :
+			cout << "\nfound TOKEN: DO";
+			break;
+
+
+
+			// Start of possible statements: 'WHILE' or 'WRITE'
+			// Q8:
+		case (8) :
+			cout << "\n>>>";
+			c = getchar();
+			if (c = 'h')
+				state = 81;
+			else if (c = 'r')
+				state = 86;
+			else if (c = 'a' || 'b' || 'c' || 'd' || 'e' || 'f' || 'g' || 'i' || 'j' || 'k' || 'l' || 'm' || 'n' || 'o' || 'p' || 'q' || 's' || 't' || 'u' || 'v' || 'w' || 'x' || 'y' || 'z') {
+				state = 2;
+			}
+			// ERROR
+			else cout << "\nUndifined input";
+			break;
+
+			// Q8h:
+		case (81) :
+			cout << "\n>>>";
+			c = getchar();
+			if (c = 'i')
+				state = 82;
+			else if (c = 'a' || 'b' || 'c' || 'd' || 'e' || 'f' || 'g' || 'h' || 'j' || 'k' || 'l' || 'm' || 'n' || 'o' || 'p' || 'q' || 'r' || 's' || 't' || 'u' || 'v' || 'w' || 'x' || 'y' || 'z') {
+				state = 2;
+			}
+			// ERROR
+			else cout << "\nUndifined input";
+			break;
+
+			// Q8hi:
+		case (82) :
+			cout << "\n>>>";
+			c = getchar();
+			if (c = 'l')
+				state = 83;
+			else if (c = 'a' || 'b' || 'c' || 'd' || 'e' || 'f' || 'g' || 'h' || 'i' || 'j' || 'k' || 'm' || 'n' || 'o' || 'p' || 'q' || 'r' || 's' || 't' || 'u' || 'v' || 'w' || 'x' || 'y' || 'z') {
+				state = 2;
+			}
+			// ERROR
+			else cout << "\nUndifined input";
+			break;
+
+			// Q8hil:
+		case (83) :
+			cout << "\n>>>";
+			c = getchar();
+			if (c = 'e')
+				state = 84;
+			else if (c = 'a' || 'b' || 'c' || 'd' || 'f' || 'g' || 'h' || 'i' || 'j' || 'k' || 'l' || 'm' || 'n' || 'o' || 'p' || 'q' || 'r' || 's' || 't' || 'u' || 'v' || 'w' || 'x' || 'y' || 'z') {
+				state = 2;
+			}
+			// ERROR
+			else cout << "\nUndifined input";
+			break;
+
+			// Q8hile (End of 'WHILE' statement) :
+		case (84) :
+			cout << "\nfound TOKEN: WHILE";
+			break;
+
+			// Q8r:
+		case (86) :
+			cout << "\n>>>";
+			c = getchar();
+			if (c = 'i')
+				state = 87;
+			else if (c = 'a' || 'b' || 'c' || 'd' || 'e' || 'f' || 'g' || 'h' || 'j' || 'k' || 'l' || 'm' || 'n' || 'o' || 'p' || 'q' || 'r' || 's' || 't' || 'u' || 'v' || 'w' || 'x' || 'y' || 'z') {
+				state = 2;
+			}
+			// ERROR
+			else cout << "\nUndifined input";
+			break;
+
+			// Q8ri:
+		case (87) :
+			cout << "\n>>>";
+			c = getchar();
+			if (c = 't')
+				state = 88;
+			else if (c = 'a' || 'b' || 'c' || 'd' || 'e' || 'f' || 'g' || 'h' || 'i' || 'j' || 'k' || 'l' || 'm' || 'n' || 'o' || 'p' || 'q' || 'r' || 's' || 'u' || 'v' || 'w' || 'x' || 'y' || 'z') {
+				state = 2;
+			}
+			// ERROR
+			else cout << "\nUndifined input";
+			break;
+
+			// Q8rit
+		case (88) :
+			cout << "\n>>>";
+			c = getchar();
+			if (c = 'e')
+				state = 89;
+			else if (c = 'a' || 'b' || 'c' || 'd' || 'f' || 'g' || 'h' || 'i' || 'j' || 'k' || 'l' || 'm' || 'n' || 'o' || 'p' || 'q' || 'r' || 's' || 't' || 'u' || 'v' || 'w' || 'x' || 'y' || 'z') {
+				state = 2;
+			}
+			// ERROR
+			else cout << "\nUndifined input";
+
+			// Q8rite (End of 'WRITE' statement) :
+		case (89) :
+			cout << "\nfound TOKEN: WRITE";
+			break;
+
+
+
+			// Start of possible statement: 'READ'
+			// Q7:
+		case (7) :
+			cout << "\n>>>";
+			c = getchar();
+			if (c = 'e')
+				state = 71;
+			else if (c = 'a' || 'b' || 'c' || 'd' || 'f' || 'g' || 'h' || 'i' || 'j' || 'k' || 'l' || 'm' || 'n' || 'o' || 'p' || 'q' || 'r' || 's' || 't' || 'u' || 'v' || 'w' || 'x' || 'y' || 'z') {
+				state = 2;
+			}
+			// ERROR
+			else cout << "\nUndifined input";
+			break;
+
+			// Q7e:
+		case (71) :
+			cout << "\n>>>";
+			c = getchar();
+			if (c = 'a')
+				state = 72;
+			else if (c = 'b' || 'c' || 'd' || 'e' || 'f' || 'g' || 'h' || 'i' || 'j' || 'k' || 'l' || 'm' || 'n' || 'o' || 'p' || 'q' || 'r' || 's' || 't' || 'u' || 'v' || 'w' || 'x' || 'y' || 'z') {
+				state = 2;
+			}
+			// ERROR
+			else cout << "\nUndifined input";
+			break;
+
+			// Q7ea:
+		case (72) :
+			cout << "\n>>>";
+			c = getchar();
+			if (c = 'd')
+				state = 73;
+			else if (c = 'a' || 'b' || 'c' || 'e' || 'f' || 'g' || 'h' || 'i' || 'j' || 'k' || 'l' || 'm' || 'n' || 'o' || 'p' || 'q' || 'r' || 's' || 't' || 'u' || 'v' || 'w' || 'x' || 'y' || 'z') {
+				state = 2;
+			}
+			// ERROR
+			else cout << "\nUndifined input";
+			break;
+
+			// Q7ead (End of  'READ' statement) :
+		case (73) :
+			cout << "\nfound TOKEN: READ";
+			break;
+
+			// Q2:
+		case (2) :
+			cout << "\n>>>";
+			c = getchar();
+			if (c = '0' || '1' || '2' || '3' || '4' || '5' || '6' || '7' || '8' || '9' || 'a' || 'b' || 'c' || 'd' || 'e' || 'f' || 'g' || 'h' || 'i' || 'j' || 'k' || 'l' || 'm' || 'n' || 'o' || 'p' || 'q' || 'r' || 's' || 't' || 'u' || 'v' || 'w' || 'x' || 'y' || 'z') {
+				state = 2;
+			}
+			else if (c = '\n'){
+				cout << "\nend of string, valid";
+			}
+			break;
+
+			// default case:
+		default:
+			cout << "Invalid Input";
+			break;
+
+
+		}
+	}
+
+	/*	if (state = 11)
+	cout << "Found TOKEN: SYMBOL";
+	else if (state = 34)
+	cout << "Found TOKEN: BEGIN";*/
+	cin.get();
+	cin.get();
+
+
+
+	// the 10 DIGITS
+	// '0' || '1' || '2' || '3' || '4' || '5' || '6' || '7' || '8' || '9'
+	// the 13 SYMBOLS
+	// '+' || '-' || '*' || '=' || '<' || '>' || '(' || ')' || '[' || ']' || ';' || ',' || '.'
+	// the 26 LETTERS
+	// 'a' || 'b' || 'c' || 'd' || 'e' || 'f' || 'g' || 'h' || 'i' || 'j' || 'k' || 'l' || 'm' || 'n' || 'o' || 'p' || 'q' || 'r' || 's' || 't' || 'u' || 'v' || 'w' || 'x' || 'y' || 'z'
+
+
+
+	return 0;
+}
